@@ -22,19 +22,6 @@ def resize_img(image, pos):
     image = cv2.resize(image, dsize=None, fx=pos, fy=pos)
     return image
 
-# 旋轉圖片
-def rotate_img(image):
-    # 讀取圖片大小
-    (h, w, d) = image.shape
-    # 找到圖片中心
-    center = (w // 2, h // 2)
-    # 代表隨機順逆時針旋轉0-2度
-    angle = random.randint(-40, 40) / 20
-    # 縮放倍數為1.03倍，避免旋轉時小狗圖案被裁切掉
-    M = cv2.getRotationMatrix2D(center, angle, 1.04)
-    # (w, h )代表圖片縮放與旋轉後，需裁切成的尺寸
-    image = cv2.warpAffine(image, M, (w, h))
-    return image
 
 # 漫水填充法去背
 def image_matting(image):
