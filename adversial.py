@@ -102,4 +102,5 @@ if __name__ == '__main__':
     adverImage = cv2.resize(adverImage, (hei, wei))
     
     cv2.imwrite("./bone_new.jpg", adverImage)
+    print("apple")
 
