@@ -103,4 +103,4 @@ if __name__ == '__main__':
     
     cv2.imwrite("./bone_new.jpg", adverImage)
     print("apple")
-
+    print("banana")
